@@ -1,0 +1,23 @@
+Rigenerazione FW completa – Master 7B local HMI branch
+
+Versione sorgenti:
+- MASTER_FW_VERSION_STR -> V1_2_1
+- channel -> test
+
+Modifiche integrate in questa rigenerazione:
+- aggiunto state.cpp mancante con stato nodi, unknown nodes, batch OTA, opzioni persistenti
+- mantenuto il path Waveshare/LVGL/touch senza riscritture invasive
+- corretto URL OTA generato dalla HMI locale verso /fwfile?name=<bin>
+- refresh firmware da SD più robusto
+- popup elenco file SD richiamabile da area nascosta nel footer destro
+- wording Wi-Fi locale più chiaro in header
+- testo forzato bianco come default sui pannelli locali
+- splash screen locale di 3 secondi in stile RaceFab73/SmartSetUP
+
+Nota splash image:
+- in questa rigenerazione non è incluso un file immagine sorgente caricato dall'utente
+- il codice verifica la presenza di /assets/splash.bmp sulla SD, ma attualmente mostra una splash testuale/brandizzata
+
+Nota compilazione:
+- pacchetto sorgenti pronto da importare nell'IDE Arduino
+- la compilazione finale dipende dalle librerie/demo Waveshare + LVGL 8.4 già funzionanti nel tuo ambiente
